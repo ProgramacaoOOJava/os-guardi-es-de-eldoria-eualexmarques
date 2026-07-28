@@ -1,13 +1,14 @@
-package nivel_novato;
+package nivel_aventureiro;
 
-public class guerreiro {
+//Classe abstrata que serve como superclasse para todos os guerreiros
+public abstract class guerreiro {
     String nome;
     String classe;
     int nivel;
     int ptvida;
     double poderBase;
 
-    //Construtor da classe
+    //Construtor da superclasse 
     public guerreiro(String nome, String classe, int nivel, int ptvida, double poderBase){
         this.nome = nome;
         this.classe = classe;
@@ -20,4 +21,8 @@ public class guerreiro {
     public void exibirStatus(){
         System.out.println("Nome: " + nome + "\nClasse: " + classe + "\nNivel: " + nivel + "\nPontos de vida: " + ptvida + "\nPoder base: " + poderBase + "\n");
     }
+
+    //Método abstrato que será sobrescrito sobre pelas subclasses
+    public abstract void usarHabilidadeEspecial();
+    
 }
